@@ -1,17 +1,21 @@
 var nj = function(x) {
+  /**
+  * nj.array
+  * Return a new array of given shape and type, filled with zeros.
+  */
   this.array = function(x) {
-    function dim(a) {
-        var dim = [];
-        for (;;) {
-            dim.push(a.length);
+    function get_dim(a) {
+      var dim = [];
+      for (;;) {
+        dim.push(a.length);
 
-            if (Array.isArray(a[0])) {
-                a = a[0];
-            } else {
-                break;
-            }
+        if (Array.isArray(a[0])) {
+          a = a[0];
+        } else {
+          break;
         }
-        return dim;
+      }
+      return dim;
     }
 
     this.insert = function() {
@@ -21,12 +25,46 @@ var nj = function(x) {
       //   alert(arguments[i]);
       // }
 
-      x[arguments[0]][arguments[1]] = value;
+      this.matrix[arguments[0]][arguments[1]] = value;
     }
 
     this.matrix = x;
-    this.shape = "(" + dim(x) + ")";
+    this.shape = "(" + get_dim(this.matrix) + ")";
     this.type = typeof(x);
 
+  };
+
+  /**
+  * nj.zeros
+  * Return a new array of given shape and type, filled with zeros.
+  */
+  this.zeros = function() {
+    function get_dim(a) {
+      var dim = [];
+      for (;;) {
+        dim.push(a.length);
+
+        if (Array.isArray(a[0])) {
+          a = a[0];
+        } else {
+          break;
+        }
+      }
+      return dim;
+    }
+
+    function set_zeros(dim) {
+      var temp = [];
+
+      for (var i = 0; i < dim[0]; ++i) {
+        temp.push(dim.length == 1 ? 0 : set_zeros(dim.slice(1)));
+      }
+
+      return temp;
+    }
+
+    this.matrix = set_zeros(arguments[0]);
+    this.shape = "(" + get_dim(this.matrix) + ")";
+    this.type = typeof(x);
   };
 }
