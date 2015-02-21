@@ -3,7 +3,7 @@ NumJS Library is made for Scientific Computing in Javascript
 
 Inspired by Numpy and Scipy Python Libraries
 
-Interested in helping out? Contact [Joseph Milla](https://twitter.com/josephmilla).
+Interested in helping out? Contact [Joseph Milla](hello@josephmilla).
 
 # TODO List
 
