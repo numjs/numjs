@@ -1,23 +1,24 @@
 var nj = function(x) {
+
+  function get_dim(a) {
+    var dim = [];
+    for (;;) {
+      dim.push(a.length);
+
+      if (Array.isArray(a[0])) {
+        a = a[0];
+      } else {
+        break;
+      }
+    }
+    return dim;
+  }
+
   /**
   * nj.array
   * Return a new array of given shape and type, filled with zeros.
   */
   this.array = function(x) {
-    function get_dim(a) {
-      var dim = [];
-      for (;;) {
-        dim.push(a.length);
-
-        if (Array.isArray(a[0])) {
-          a = a[0];
-        } else {
-          break;
-        }
-      }
-      return dim;
-    }
-
     this.insert = function() {
       var value = arguments[arguments.length - 1];
 
@@ -30,8 +31,7 @@ var nj = function(x) {
 
     this.matrix = x;
     this.shape = "(" + get_dim(this.matrix) + ")";
-    this.type = typeof(x);
-
+    this.type = "njarray";
   };
 
   /**
@@ -39,20 +39,6 @@ var nj = function(x) {
   * Return a new array of given shape and type, filled with zeros.
   */
   this.zeros = function() {
-    function get_dim(a) {
-      var dim = [];
-      for (;;) {
-        dim.push(a.length);
-
-        if (Array.isArray(a[0])) {
-          a = a[0];
-        } else {
-          break;
-        }
-      }
-      return dim;
-    }
-
     function set_zeros(dim) {
       var temp = [];
 
@@ -65,7 +51,7 @@ var nj = function(x) {
 
     this.matrix = set_zeros(arguments[0]);
     this.shape = "(" + get_dim(this.matrix) + ")";
-    this.type = typeof(x);
+    this.type = "njarray";
   };
 
   /**
@@ -73,20 +59,6 @@ var nj = function(x) {
   * Return a new array of given shape and type, filled with ones.
   */
   this.ones = function() {
-    function get_dim(a) {
-      var dim = [];
-      for (;;) {
-        dim.push(a.length);
-
-        if (Array.isArray(a[0])) {
-          a = a[0];
-        } else {
-          break;
-        }
-      }
-      return dim;
-    }
-
     function set_ones(dim) {
       var temp = [];
 
@@ -99,6 +71,6 @@ var nj = function(x) {
 
     this.matrix = set_ones(arguments[0]);
     this.shape = "(" + get_dim(this.matrix) + ")";
-    this.type = typeof(x);
+    this.type = "njarray";
   };
 }
