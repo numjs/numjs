@@ -67,4 +67,38 @@ var nj = function(x) {
     this.shape = "(" + get_dim(this.matrix) + ")";
     this.type = typeof(x);
   };
+
+  /**
+  * nj.ones
+  * Return a new array of given shape and type, filled with ones.
+  */
+  this.ones = function() {
+    function get_dim(a) {
+      var dim = [];
+      for (;;) {
+        dim.push(a.length);
+
+        if (Array.isArray(a[0])) {
+          a = a[0];
+        } else {
+          break;
+        }
+      }
+      return dim;
+    }
+
+    function set_ones(dim) {
+      var temp = [];
+
+      for (var i = 0; i < dim[0]; ++i) {
+        temp.push(dim.length == 1 ? 1 : set_ones(dim.slice(1)));
+      }
+
+      return temp;
+    }
+
+    this.matrix = set_ones(arguments[0]);
+    this.shape = "(" + get_dim(this.matrix) + ")";
+    this.type = typeof(x);
+  };
 }
