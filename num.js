@@ -115,26 +115,21 @@ var nj = function(x) {
   * Return dot product of two matrices
   */
   function dot(m1, m2) {
-    var m1_row = dim(m1)[0];
-    var m1_col = dim(m1)[1];
-    var m2_row = dim(m2)[0];
-    var m2_col = dim(m2)[1];
-
-    if(m1_row == m2_row) {
+    if(dim(m1)[0] == dim(m2)[0]) {
       return inner(m1, m2);
-    } else if (m1_col != m2_row) {
+    } else if (dim(m1)[1] != dim(m2)[0]) {
       throw "Error: Incompatible size";
     }
 
-    var p = zeros([m1_row, m2_col]);
+    var p = zeros([dim(m1)[0], dim(m2)[1]]);
 
-    for (var i = 0; i < m1_row; i++) {
+    for (var i = 0; i < dim(m1)[0]; i++) {
       p[i] = [];
 
-      for (var j = 0; j < m2_col; j++) {
+      for (var j = 0; j < dim(m2)[1]; j++) {
         var sum = 0;
 
-        for (var k = 0; k < m1_col; k++) {
+        for (var k = 0; k < dim(m1)[1]; k++) {
           sum += m1[i][k] * m2[k][j];
         }
 
