@@ -39,7 +39,7 @@ triu(m[, k])	Make a copy of a matrix with elements below the k-th diagonal zeroe
 
 orthogonal_procrustes(A, B[, check_finite])	Compute the matrix solution of the orthogonal Procrustes problem.
 
-Eigenvalue Problems
+## Eigenvalue Problems
 
 eig(a[, b, left, right, overwrite_a, ...])	Solve an ordinary or generalized eigenvalue problem of a square matrix.
 
@@ -101,8 +101,6 @@ See also
 
 scipy.linalg.interpolative – Interpolative matrix decompositions
 
-
-
 ## Matrix Functions
 
 expm(A[, q])	Compute the matrix exponential using Pade approximation.
@@ -145,7 +143,7 @@ solve_discrete_lyapunov(a, q[, method])	Solves the discrete Lyapunov equation (A
 
 solve_lyapunov(a, q)	Solves the continuous Lyapunov equation (AX + XA^H = Q) given the values of A and Q using the Bartels-Stewart algorithm.
 
-Special Matrices
+## Special Matrices
 
 block_diag(*arrs)	Create a block diagonal matrix from provided arrays.
 
@@ -171,7 +169,7 @@ toeplitz(c[, r])	Construct a Toeplitz matrix.
 
 tri(N[, M, k, dtype])	Construct (N, M) matrix filled with ones at and below the k-th diagonal.
 
-Low-level routines
+## Low-level routines
 
 get_blas_funcs(names[, arrays, dtype])	Return available BLAS function objects from names.
 
