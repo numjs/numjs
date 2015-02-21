@@ -9,35 +9,35 @@ Interested in helping out? Contact <hello@josephmilla.com>.
 
 ## Basics
 
-inv(a[, overwrite_a, check_finite])	Compute the inverse of a matrix.
+`inv(a[, overwrite_a, check_finite])`	Compute the inverse of a matrix.
 
-solve(a, b[, sym_pos, lower, overwrite_a, ...])	Solve the equation a x = b for x.
+`solve(a, b[, sym_pos, lower, overwrite_a, ...])`	Solve the equation a x = b for x.
 
-solve_banded(l_and_u, ab, b[, overwrite_ab, ...])	Solve the equation a x = b for x, assuming a is banded matrix.
+`solve_banded(l_and_u, ab, b[, overwrite_ab, ...])`	Solve the equation a x = b for x, assuming a is banded matrix.
 
-solveh_banded(ab, b[, overwrite_ab, ...])	Solve equation a x = b.
+`solveh_banded(ab, b[, overwrite_ab, ...])`	Solve equation a x = b.
 
-solve_triangular(a, b[, trans, lower, ...])	Solve the equation a x = b for x, assuming a is a triangular matrix.
+`solve_triangular(a, b[, trans, lower, ...])`	Solve the equation a x = b for x, assuming a is a triangular matrix.
 
-det(a[, overwrite_a, check_finite])	Compute the determinant of a matrix
+`det(a[, overwrite_a, check_finite])`	Compute the determinant of a matrix
 
-norm(a[, ord])	Matrix or vector norm.
+`norm(a[, ord])`	Matrix or vector norm.
 
-lstsq(a, b[, cond, overwrite_a, ...])	Compute least-squares solution to equation Ax = b.
+`lstsq(a, b[, cond, overwrite_a, ...])`	Compute least-squares solution to equation Ax = b.
 
-pinv(a[, cond, rcond, return_rank, check_finite])	Compute the (Moore-Penrose) pseudo-inverse of a matrix.
+`pinv(a[, cond, rcond, return_rank, check_finite])`	Compute the (Moore-Penrose) pseudo-inverse of a matrix.
 
-pinv2(a[, cond, rcond, return_rank, ...])	Compute the (Moore-Penrose) pseudo-inverse of a matrix.
+`pinv2(a[, cond, rcond, return_rank, ...])`	Compute the (Moore-Penrose) pseudo-inverse of a matrix.
 
-pinvh(a[, cond, rcond, lower, return_rank, ...])	Compute the (Moore-Penrose) pseudo-inverse of a Hermitian matrix.
+`pinvh(a[, cond, rcond, lower, return_rank, ...])`	Compute the (Moore-Penrose) pseudo-inverse of a Hermitian matrix.
 
-kron(a, b)	Kronecker product.
+`kron(a, b)`	Kronecker product.
 
-tril(m[, k])	Make a copy of a matrix with elements above the k-th diagonal zeroed.
+`tril(m[, k])`	Make a copy of a matrix with elements above the k-th diagonal zeroed.
 
-triu(m[, k])	Make a copy of a matrix with elements below the k-th diagonal zeroed.
+`triu(m[, k])`	Make a copy of a matrix with elements below the k-th diagonal zeroed.
 
-orthogonal_procrustes(A, B[, check_finite])	Compute the matrix solution of the orthogonal Procrustes problem.
+`orthogonal_procrustes(A, B[, check_finite])`	Compute the matrix solution of the orthogonal Procrustes problem.
 
 ## Eigenvalue Problems
 
@@ -57,7 +57,7 @@ orthogonal_procrustes(A, B[, check_finite])	Compute the matrix solution of the o
 
 ## Decompositions
 
-l`u(a[, permute_l, overwrite_a, check_finite])`	Compute pivoted LU decomposition of a matrix.
+`lu(a[, permute_l, overwrite_a, check_finite])`	Compute pivoted LU decomposition of a matrix.
 
 `lu_factor(a[, overwrite_a, check_finite])`	Compute pivoted LU decomposition of a matrix.
 
