@@ -149,3 +149,5 @@ var nj = function(x) {
     this.matrix = dot(m1, m2)
   }
 }
+
+var nj = new nj();
