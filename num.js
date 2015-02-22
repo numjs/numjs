@@ -16,6 +16,78 @@ var nj = function(x) {
   }
 
   /**
+  * nj.add
+  * Addition
+  */
+  function add(x, y) {
+    return x + y;
+  }
+
+  this.add = function(x, y) {
+    this.value = add(x, y);
+  }
+
+  /**
+  * nj.sub
+  * Subtraction
+  */
+  function sub(x, y) {
+    return x - y;
+  }
+
+  this.sub = function(x, y) {
+    this.value = sub(x, y);
+  }
+
+  /**
+  * nj.mul
+  * Multiplication
+  */
+  function mul(x, y) {
+    return x * y;
+  }
+
+  this.mul = function(x, y) {
+    this.value = mul(x, y);
+  }
+
+  /**
+  * nj.div
+  * Division
+  */
+  function div(x, y) {
+    return x / y;
+  }
+
+  this.div = function(x, y) {
+    this.value = div(x, y);
+  }
+
+  /**
+  * nj.sum
+  * Summation
+  */
+  function sum() {
+    var s = 0;
+
+    for(var i = 0; i < arguments.length; i++) {
+      s += arguments[i];
+    }
+
+    return s;
+  }
+
+  this.sum = function() {
+    var s = 0;
+
+    for(var i = 0; i < arguments.length; i++) {
+      s += arguments[i];
+    }
+
+    this.matrix = s;
+  }
+
+  /**
   * nj.array
   * Return a new array of given shape and type, filled with zeros.
   */
