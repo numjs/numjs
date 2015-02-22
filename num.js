@@ -64,15 +64,164 @@ var nj = function(x) {
   }
 
   /**
-  * nj.pi
-  * Pi
+  * nj.abs
+  * Return the absolute value of x
   */
-  function pi() {
-    return Math.pi;
+  function abs(x) {
+    return Math.abs(x);
   }
 
-  this.pi = function() {
-    return pi();
+  this.abs = function(x) {
+    this.value = abs(x);
+  }
+
+  /**
+  * nj.ceil
+  * Returns x, rounded upwards to the nearest integer
+  */
+  function ceil(x) {
+    return Math.ceil(x);
+  }
+
+  this.ceil = function(x) {
+    this.value = ceil(x);
+  }
+
+  /**
+  * nj.floor
+  * Returns x, rounded downwards to the nearest integer
+  */
+  function floor(x) {
+    return Math.floor(x);
+  }
+
+  this.floor = function(x) {
+    this.value = floor(x);
+  }
+
+  /**
+  * nj.exp
+  * Returns the value of E^x
+  */
+  function exp(x) {
+    return Math.exp(x);
+  }
+
+  this.exp = function(x) {
+    this.value = exp(x);
+  }
+
+  /**
+  * nj.log
+  * Returns the natural logarithm (base E) of x
+  */
+  function log(x) {
+    return Math.log(x);
+  }
+
+  this.log = function(x) {
+    this.value = log(x);
+  }
+
+  /**
+  * nj.pow
+  * Returns the value of x to the power of y
+  */
+  function pow(x, y) {
+    return Math.pow(x, y);
+  }
+
+  this.pow = function(x, y) {
+    this.value = pow(x, y);
+  }
+
+  /**
+  * nj.round
+  * Rounds x to the nearest integer
+  */
+  function round(x) {
+    return Math.round(x);
+  }
+
+  this.round = function(x) {
+    this.value = round(x);
+  }
+
+  /**
+  * nj.sqrt
+  * Rounds x to the nearest integer
+  */
+  function sqrt(x) {
+    return Math.sqrt(x);
+  }
+
+  this.sqrt = function(x) {
+    this.value = sqrt(x);
+  }
+
+  // /**
+  // * nj.random
+  // * Returns a random number between 0 and 1
+  // */
+  // function random() {
+  //   return Math.random();
+  // }
+  //
+  // this.random = function() {
+  //   this.value = Math.random();
+  // }
+
+  /**
+  * nj.max
+  * Returns the number with the highest value
+  */
+  function max() {
+    return Math.max(arguments);
+  }
+
+  this.max = function() {
+    var max = arguments[0];
+
+    for(var i = 1; i < arguments.length; i++) {
+      if(max <= arguments[i]) {
+        max = arguments[i];
+      }
+    }
+
+    this.value = max;
+  }
+
+  /**
+  * nj.min
+  * Returns the number with the lowest value
+  */
+  function min() {
+    return Math.min(arguments);
+  }
+
+  this.min = function() {
+    var min = arguments[0];
+
+    for(var i = 1; i < arguments.length; i++) {
+      if(min >= arguments[i]) {
+        min = arguments[i];
+      }
+    }
+
+    this.value = min;
+  }
+
+
+  /**
+  * nj.PI
+  * PI
+  */
+  function PI() {
+    return Math.PI;
+  }
+
+  this.PI = function() {
+    this.value = Math.PI;
   }
 
   /**
@@ -80,7 +229,7 @@ var nj = function(x) {
   * Cosine
   */
   function cos(deg) {
-    return Math.cos((deg / 180) * pi());
+    return Math.cos((deg / 180) * PI());
   }
 
   this.cos = function(deg) {
@@ -92,7 +241,7 @@ var nj = function(x) {
   * Sine
   */
   function sin(deg) {
-    return Math.sin((deg / 180) * pi());
+    return Math.sin((deg / 180) * PI());
   }
 
   this.sin = function(deg) {
@@ -104,7 +253,7 @@ var nj = function(x) {
   * Tangent
   */
   function tan(deg) {
-    return Math.tan((deg / 180) * pi());
+    return Math.tan((deg / 180) * PI());
   }
 
   this.tan = function(deg) {
@@ -116,7 +265,7 @@ var nj = function(x) {
   * Arcosine
   */
   function acos(deg) {
-    return Math.acos((deg / 180) * pi());
+    return Math.acos((deg / 180) * PI());
   }
 
   this.acos = function(deg) {
@@ -128,7 +277,7 @@ var nj = function(x) {
   * Arcine
   */
   function asin(deg) {
-    return Math.asin((deg / 180) * pi());
+    return Math.asin((deg / 180) * PI());
   }
 
   this.asin = function(deg) {
@@ -140,7 +289,7 @@ var nj = function(x) {
   * Arctangent
   */
   function atan(deg) {
-    return Math.atan((deg / 180) * pi());
+    return Math.atan((deg / 180) * PI());
   }
 
   this.atan = function(deg) {
@@ -152,7 +301,7 @@ var nj = function(x) {
   * Hyperbolic Cosine
   */
   function cosh(deg) {
-    return Math.cosh((deg / 180) * pi());
+    return Math.cosh((deg / 180) * PI());
   }
 
   this.cosh = function(deg) {
@@ -164,7 +313,7 @@ var nj = function(x) {
   * Hyperbolic Sine
   */
   function sinh(deg) {
-    return Math.sinh((deg / 180) * pi());
+    return Math.sinh((deg / 180) * PI());
   }
 
   this.sinh = function(deg) {
@@ -176,7 +325,7 @@ var nj = function(x) {
   * Hyperbolic Tangent
   */
   function tanh(deg) {
-    return Math.ttanhan((deg / 180) * pi());
+    return Math.ttanhan((deg / 180) * PI());
   }
 
   this.tanh = function(deg) {
