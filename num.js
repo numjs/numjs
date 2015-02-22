@@ -357,7 +357,7 @@ var nj = function(x) {
       s += arguments[i];
     }
 
-    this.matrix = s;
+    this.value = s;
   }
 
   /*****************/
@@ -477,11 +477,11 @@ var nj = function(x) {
       //   alert(arguments[i]);
       // }
 
-      this.matrix[arguments[0]][arguments[1]] = value;
+      this.value[arguments[0]][arguments[1]] = value;
     }
 
-    this.matrix = m;
-    this.shape = "(" + dim(this.matrix) + ")";
+    this.value = m;
+    this.shape = "(" + dim(this.value) + ")";
     this.type = "njarray";
   }
 
@@ -500,8 +500,8 @@ var nj = function(x) {
   }
 
   this.zeros = function(d) {
-    this.matrix = zeros(d);
-    this.shape = "(" + dim(this.matrix) + ")";
+    this.value = zeros(d);
+    this.shape = "(" + dim(this.value) + ")";
     this.type = "njarray";
   }
 
@@ -520,8 +520,8 @@ var nj = function(x) {
   }
 
   this.ones = function(d) {
-    this.matrix = ones(d);
-    this.shape = "(" + dim(this.matrix) + ")";
+    this.value = ones(d);
+    this.shape = "(" + dim(this.value) + ")";
     this.type = "njarray";
   }
 
@@ -534,8 +534,8 @@ var nj = function(x) {
   }
 
   this.eye = function(d) {
-    this.matrix = set_eye(d);
-    this.shape = "(" + dim(this.matrix) + ")";
+    this.value = set_eye(d);
+    this.shape = "(" + dim(this.value) + ")";
     this.type = "njarray";
   }
 
@@ -557,7 +557,7 @@ var nj = function(x) {
   }
 
   this.inner = function(v1, v2) {
-    this.matrix = inner(v1, v2)
+    this.value = inner(v1, v2)
   }
 
   /**
@@ -591,7 +591,7 @@ var nj = function(x) {
   }
 
   this.dot = function(m1, m2) {
-    this.matrix = dot(m1, m2)
+    this.value = dot(m1, m2)
   }
 }
 
