@@ -460,6 +460,57 @@ var nj = function(x) {
     this.value = xnor(x, y);
   }
 
+  /******************/
+  /**    Adders    **/
+  /******************/
+
+  /**
+  * nj.half_adder
+  * Half Adder
+  */
+  function half_adder(x, y) {
+    var output = []
+
+    output[0] = and(x, y);
+    output[1] = xor(x, y);
+
+    return output;
+  }
+
+  this.half_adder = function(x, y) {
+    this.value = half_adder(x, y);
+  }
+
+  /**
+  * nj.full_adder
+  * Full Adder
+  */
+  function full_adder(x, y, c) {
+    var output = []
+
+    var xg1 = xor(x, y);
+    var ag1 = and(x, y);
+    var xg2 = xor(xg1, c);
+    var ag2 = and(xg1, c);
+    var og = or(ag1, ag2);
+
+    output[0] = xg2;
+    output[1] = og;
+
+    return output;
+  }
+
+  this.full_adder = function(x, y) {
+    this.value = full_adder(x, y);
+  }
+
+  // /**
+  // * nj.fbrc_adder
+  // * Four Bit Ripple Carry Adder
+  // */
+  // function fbrc_adder(x, y) {
+  //
+  // }
 
   /********************/
   /** Linear Algebra **/
