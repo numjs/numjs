@@ -460,6 +460,37 @@ var nj = function(x) {
     this.value = xnor(x, y);
   }
 
+  /**
+  * nj.aoi_1
+  * 2-1 AND-OR-Invert Gate
+  */
+  function aoi_1(x, y, z) {
+    var ag = and(x, y);
+    var og = or(ag, z);
+
+    return not(og);
+  }
+
+  this.aoi_1 = function(x, y, z) {
+    this.value = aoi_2(x, y, z);
+  }
+
+  /**
+  * nj.aoi_2
+  * 2-2 AND-OR-Invert Gate
+  */
+  function aoi_2(w, x, y, z) {
+    var ag1 = and(w, x);
+    var ag2 = and(y, z);
+    var og = or(ag1, ag2);
+
+    return not(og);
+  }
+
+  this.aoi_2 = function(w, x, y, z) {
+    this.value = aoi_2(w, x, y, z);
+  }
+
   /******************/
   /**    Adders    **/
   /******************/
@@ -514,7 +545,7 @@ var nj = function(x) {
 
   /**
   * nj.sr_latch
-  * SR Latch
+  * SR (Set-Reset) Latch
   */
   function sr_latch(s, r) {
     output = [];
