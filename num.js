@@ -68,7 +68,7 @@ var nj = function(x) {
   * Pi
   */
   function pi() {
-    return Math.pi
+    return Math.pi;
   }
 
   this.pi = function() {
