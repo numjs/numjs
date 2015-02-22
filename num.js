@@ -159,17 +159,17 @@ var nj = function(x) {
     this.value = sqrt(x);
   }
 
-  // /**
-  // * nj.random
-  // * Returns a random number between 0 and 1
-  // */
-  // function random() {
-  //   return Math.random();
-  // }
-  //
-  // this.random = function() {
-  //   this.value = Math.random();
-  // }
+  /**
+  * nj.random
+  * Returns a random number between x and y
+  */
+  function random(x, y) {
+    return Math.random() * (y - x) + x;
+  }
+
+  this.random = function(x, y) {
+    this.value = random(x, y);
+  }
 
   /**
   * nj.max
