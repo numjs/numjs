@@ -1,0 +1,4 @@
+dist
+.tmp
+.sass-cache
+bower_components
