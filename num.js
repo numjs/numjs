@@ -512,6 +512,26 @@ var nj = function(x) {
   //
   // }
 
+  /**
+  * nj.sr_latch
+  * SR Latch
+  */
+  function sr_latch(s, r) {
+    output = [];
+
+    var ng1 = nor(s, ng2);
+    var ng2 = nor(r, ng1);
+
+    output[0] = ng1;
+    output[1] = ng2;
+
+    return output;
+  }
+
+  this.sr_latch = function(s, r) {
+    this.value = sr_latch(s, r);
+  }
+
   /********************/
   /** Linear Algebra **/
   /********************/
