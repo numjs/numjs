@@ -11,7 +11,6 @@ Interested in helping out? Contact <hello@josephmilla.com>.
 ## Usage
 `nj.<method>(<parameters>,...)`
 
-## TODO List
 ## Basics
 
 `inv(a[, overwrite_a, check_finite])`	Compute the inverse of a matrix.
