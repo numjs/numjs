@@ -664,6 +664,57 @@ var nj = function(x) {
   this.dot = function(m1, m2) {
     this.value = dot(m1, m2)
   }
+
+  /**
+  * nj.forward_sub
+  * Forward Substitution
+  */
+  function forward_sub(L, b) {
+    var n = L.length;
+    var c = b;
+
+    for(var i = 0; i < n; i++) {
+      if(L[i][i] == 0) {
+        return -1;
+      } else {
+        for(var j = i + 1; j < n; j++) {
+          c[j] = c[j] - (L[j][i] * c[i]);
+        }
+      }
+    }
+
+    return c;
+  }
+
+  this.forward_sub = function(L, b) {
+    this.value = forward_sub(L, b);
+  }
+
+  /**
+  * nj.backward_sub
+  * Backward Substitution
+  */
+  function backward_sub(U, c) {
+    var n = U.length;
+    x = zeros([n]);
+
+    for(var i = n -1; i >= 0; i--) {
+      if(U[i][i] == 0) {
+        return -1;
+      } else {
+        x[i] = c[i];
+
+        for(var j = i + 1; i < n; i++) {
+          x[i] = x[i] - U[i][j] * x[j];
+        }
+
+        x[i] = x[i] / U[i][i];
+      }
+    }
+
+    return x;
+  }
+
 }
 
 var nj = new nj();
