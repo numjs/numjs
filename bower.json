@@ -1,0 +1,9 @@
+{
+  "name": "numjs",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "^3.3.0"
+  },
+  "appPath": "app",
+  "moduleName": "numjsapp"
+}

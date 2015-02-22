@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta name="description" content="A library made for scientific computing in Javascript"/>
+    <meta http-equiv="content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>NumJS</title>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+          <div class="page-header">
+            <h1>NumJS <small>Code Console</small></h1>
+          </div>
+
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-console"></span></span>
+            <input id="input" type="text" class="form-control" placeholder="Enter code here" aria-describedby="basic-addon1" onkeyup="inputKeyUp(event)">
+          </div>
+
+          <br>
+
+          <div id="output" class="jumbotron">
+          </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="num.js"></script>
+    <script>
+    function inputKeyUp(e) {
+      e.which = e.which || e.keyCode;
+      if(e.which == 13) {
+        eval(document.getElementById("input").value);
+        document.getElementById("output").innerHTML = "<p>" + eval(nj.value) + "</p>";
+      }
+    }
+    </script>
+  </body>
+</html>
