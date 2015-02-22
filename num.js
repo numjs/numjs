@@ -64,6 +64,126 @@ var nj = function(x) {
   }
 
   /**
+  * nj.pi
+  * Pi
+  */
+  function pi() {
+    return Math.pi
+  }
+
+  this.pi = function() {
+    return pi();
+  }
+
+  /**
+  * nj.cos
+  * Cosine
+  */
+  function cos(deg) {
+    return Math.cos((deg / 180) * pi());
+  }
+
+  this.cos = function(deg) {
+    this.value = cos(deg);
+  }
+
+  /**
+  * nj.sin
+  * Sine
+  */
+  function sin(deg) {
+    return Math.sin((deg / 180) * pi());
+  }
+
+  this.sin = function(deg) {
+    this.value = sin(deg);
+  }
+
+  /**
+  * nj.tan
+  * Tangent
+  */
+  function tan(deg) {
+    return Math.tan((deg / 180) * pi());
+  }
+
+  this.tan = function(deg) {
+    this.value = tan(deg);
+  }
+
+  /**
+  * nj.acos
+  * Arcosine
+  */
+  function acos(deg) {
+    return Math.acos((deg / 180) * pi());
+  }
+
+  this.acos = function(deg) {
+    this.value = acos(deg);
+  }
+
+  /**
+  * nj.asin
+  * Arcine
+  */
+  function asin(deg) {
+    return Math.asin((deg / 180) * pi());
+  }
+
+  this.asin = function(deg) {
+    this.value = asin(deg);
+  }
+
+  /**
+  * nj.atan
+  * Arctangent
+  */
+  function atan(deg) {
+    return Math.atan((deg / 180) * pi());
+  }
+
+  this.atan = function(deg) {
+    this.value = atan(deg);
+  }
+
+  /**
+  * nj.cosh
+  * Hyperbolic Cosine
+  */
+  function cosh(deg) {
+    return Math.cosh((deg / 180) * pi());
+  }
+
+  this.cosh = function(deg) {
+    this.value = cosh(deg);
+  }
+
+  /**
+  * nj.sinh
+  * Hyperbolic Sine
+  */
+  function sinh(deg) {
+    return Math.sinh((deg / 180) * pi());
+  }
+
+  this.sinh = function(deg) {
+    this.value = sinh(deg);
+  }
+
+  /**
+  * nj.tanh
+  * Hyperbolic Tangent
+  */
+  function tanh(deg) {
+    return Math.ttanhan((deg / 180) * pi());
+  }
+
+  this.tanh = function(deg) {
+    this.value = tanh(deg);
+  }
+
+  /**
   * nj.sum
   * Summation
   */
