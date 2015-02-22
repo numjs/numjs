@@ -15,6 +15,10 @@ var nj = function(x) {
     return d;
   }
 
+  /****************/
+  /**    Math    **/
+  /****************/
+
   /**
   * nj.add
   * Addition
@@ -355,6 +359,111 @@ var nj = function(x) {
 
     this.matrix = s;
   }
+
+  /*****************/
+  /** Logic Gates **/
+  /*****************/
+
+  /**
+  * nj.not
+  * NOT Gate
+  */
+  function not(x) {
+    return !Boolean(x);
+  }
+
+  this.not = function(x) {
+    this.value = not(x);
+  }
+
+  /**
+  * nj.and
+  * AND Gate
+  */
+  function and(x, y) {
+    if(Boolean(x) == 0 || Boolean(y) == 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  this.and = function(x, y) {
+    this.value = and(x, y);
+  }
+
+  /**
+  * nj.or
+  * OR Gate
+  */
+  function or(x, y) {
+    if(Boolean(x) == 1 || Boolean(y) == 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  this.or = function(x, y) {
+    this.value = or(x, y);
+  }
+
+  /**
+  * nj.nand
+  * NAND Gate
+  */
+  function nand(x, y) {
+    return not(and(x, y));
+  }
+
+  this.nand = function(x, y) {
+    this.value = nand(x, y);
+  }
+
+  /**
+  * nj.nor
+  * NOR Gate
+  */
+  function nor(x, y) {
+    return not(or(x, y));
+  }
+
+  this.nor = function(x, y) {
+    this.value = nor(x, y);
+  }
+
+  /**
+  * nj.xor
+  * XOR Gate
+  */
+  function xor(x, y) {
+    if(Boolean(x) != Boolean(y)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  this.xor = function(x, y) {
+    this.value = xor(x, y);
+  }
+
+  /**
+  * nj.xnor
+  * XNOR Gate
+  */
+  function xnor(x, y) {
+    return not(xor(x, y));
+  }
+
+  this.xnor = function(x, y) {
+    this.value = xnor(x, y);
+  }
+
+
+  /********************/
+  /** Linear Algebra **/
+  /********************/
 
   /**
   * nj.array
