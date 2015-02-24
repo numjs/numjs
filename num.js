@@ -360,6 +360,22 @@ var nj = function(x) {
     this.value = s;
   }
 
+  /**
+  * nj.fibo
+  * Returns the n-th fibonacii number
+  */
+  function fibo(x) {
+    if(x == 0 || x == 1) {
+      return 1;
+    } else {
+      return fibo(x - 1) + fibo(n - 2);
+    }
+  }
+
+  this.fibo = function(x) {
+    this.value = fibo(x);
+  }
+
   /*****************/
   /** Logic Gates **/
   /*****************/
